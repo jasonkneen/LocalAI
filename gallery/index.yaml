@@ -1279,6 +1279,287 @@
     - filename: Menlo_Jan-nano-128k-Q4_K_M.gguf
       sha256: a864031a138288da427ca176afd61d7fe2b03fd19a84a656b2691aa1f7a12921
       uri: huggingface://bartowski/Menlo_Jan-nano-128k-GGUF/Menlo_Jan-nano-128k-Q4_K_M.gguf
+- !!merge <<: *qwen3
+  icon: https://huggingface.co/DavidAU/Qwen3-55B-A3B-TOTAL-RECALL-V1.3/resolve/main/qwen3-total-recall.gif
+  name: "qwen3-55b-a3b-total-recall-v1.3-i1"
+  urls:
+    - https://huggingface.co/DavidAU/Qwen3-55B-A3B-TOTAL-RECALL-V1.3
+    - https://huggingface.co/mradermacher/Qwen3-55B-A3B-TOTAL-RECALL-V1.3-i1-GGUF
+  description: |
+    WARNING: MADNESS - UN HINGED and... NSFW. Vivid prose. INTENSE. Visceral Details. Violence. HORROR. GORE. Swearing. UNCENSORED... humor, romance, fun.
+    This repo contains the full precision source code, in "safe tensors" format to generate GGUFs, GPTQ, EXL2, AWQ, HQQ and other formats. The source code can also be used directly.
+
+    This model is for all use cases, but excels in creative use cases specifically.
+
+    This model is based on Qwen3-30B-A3B (MOE, 128 experts, 8 activated), with Brainstorm 40X (by DavidAU - details at bottom of this page.
+
+    This is the refined version -V1.3- from this project (see this repo for all settings, details, system prompts, example generations etc etc):
+
+    https://huggingface.co/DavidAU/Qwen3-55B-A3B-TOTAL-RECALL-Deep-40X-GGUF/
+
+    This version -1.3- is slightly smaller, with further refinements to the Brainstorm adapter.
+
+    This will change generation and reasoning performance within the model.
+  overrides:
+    parameters:
+      model: Qwen3-55B-A3B-TOTAL-RECALL-V1.3.i1-Q4_K_M.gguf
+  files:
+    - filename: Qwen3-55B-A3B-TOTAL-RECALL-V1.3.i1-Q4_K_M.gguf
+      sha256: bcf5a1f8a40e9438a19b23dfb40e872561c310296c5ac804f937a0e3c1376def
+      uri: huggingface://mradermacher/Qwen3-55B-A3B-TOTAL-RECALL-V1.3-i1-GGUF/Qwen3-55B-A3B-TOTAL-RECALL-V1.3.i1-Q4_K_M.gguf
+
+- !!merge <<: *qwen3
+  name: "qwen3-55b-a3b-total-recall-deep-40x"
+  icon: https://huggingface.co/DavidAU/Qwen3-55B-A3B-TOTAL-RECALL-V1.3/resolve/main/qwen3-total-recall.gif
+  urls:
+    - https://huggingface.co/DavidAU/Qwen3-55B-A3B-TOTAL-RECALL-Deep-40X-GGUF
+  description: |
+    WARNING: MADNESS - UN HINGED and... NSFW. Vivid prose. INTENSE. Visceral Details. Violence. HORROR. GORE. Swearing. UNCENSORED... humor, romance, fun.
+    Qwen3-55B-A3B-TOTAL-RECALL-Deep-40X-GGUF
+
+    A highly experimental model ("tamer" versions below) based on Qwen3-30B-A3B (MOE, 128 experts, 8 activated), with Brainstorm 40X (by DavidAU - details at bottom of this page).
+
+    These modifications blow the model (V1) out to 87 layers, 1046 tensors and 55B parameters.
+
+    Note that some versions are smaller than this, with fewer layers/tensors and smaller parameter counts.
+
+    The adapter extensively alters performance, reasoning and output generation.
+
+    Exceptional changes in creative, prose and general performance.
+
+    Regens of the same prompt - even with the same settings - will be very different.
+
+    THREE example generations below - creative (generated with Q3_K_M, V1 model).
+
+    ONE example generation (#4) - non creative (generated with Q3_K_M, V1 model).
+
+    You can run this model on CPU and/or GPU due to unique model construction, size of experts and total activated experts at 3B parameters (8 experts), which translates into roughly almost 6B parameters in this version.
+
+    Two quants uploaded for testing: Q3_K_M, Q4_K_M
+
+    V3, V4 and V5 are also available in these two quants.
+
+    V2 and V6 in Q3_k_m only; as are: V 1.3, 1.4, 1.5, 1.7 and V7 (newest)
+
+    NOTE: V2 and up are from source model 2, V1 and 1.3,1.4,1.5,1.7 are from source model 1.
+  overrides:
+    parameters:
+      model: Qwen3-55B-A3B-TOTAL-RECALL-V5-Deep-40X-q4_K_M.gguf
+  files:
+    - filename: Qwen3-55B-A3B-TOTAL-RECALL-V5-Deep-40X-q4_K_M.gguf
+      sha256: 20ef786a8c8e74eb257aa3069e237cbd40f42d25f5502fed6fa016bb8afbdae4
+      uri: huggingface://DavidAU/Qwen3-55B-A3B-TOTAL-RECALL-Deep-40X-GGUF/Qwen3-55B-A3B-TOTAL-RECALL-V5-Deep-40X-q4_K_M.gguf
+- !!merge <<: *qwen3
+  name: "qwen3-42b-a3b-stranger-thoughts-deep20x-abliterated-uncensored-i1"
+  icon: https://huggingface.co/DavidAU/Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored/resolve/main/qwen-42b-ablit.jpg
+  urls:
+    - https://huggingface.co/DavidAU/Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored
+    - https://huggingface.co/mradermacher/Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored-i1-GGUF
+  description: |
+    WARNING: NSFW. Vivid prose. INTENSE. Visceral Details. Violence. HORROR. GORE. Swearing. UNCENSORED... humor, romance, fun.
+    Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored
+
+    This repo contains the full precision source code, in "safe tensors" format to generate GGUFs, GPTQ, EXL2, AWQ, HQQ and other formats. The source code can also be used directly.
+
+    ABOUT:
+
+    Qwen's excellent "Qwen3-30B-A3B", abliterated by "huihui-ai" then combined Brainstorm 20x (tech notes at bottom of the page) in a MOE (128 experts) at 42B parameters (up from 30B).
+
+    This pushes Qwen's abliterated/uncensored model to the absolute limit for creative use cases.
+
+    Prose (all), reasoning, thinking ... all will be very different from reg "Qwen 3s".
+
+    This model will generate horror, fiction, erotica, - you name it - in vivid, stark detail.
+
+    It will NOT hold back.
+
+    Likewise, regen(s) of the same prompt - even at the same settings - will create very different version(s) too.
+
+    See FOUR examples below.
+
+    Model retains full reasoning, and output generation of a Qwen3 MOE ; but has not been tested for "non-creative" use cases.
+
+    Model is set with Qwen's default config:
+
+        40 k context
+        8 of 128 experts activated.
+        Chatml OR Jinja Template (embedded)
+
+    IMPORTANT:
+
+    See usage guide / repo below to get the most out of this model, as settings are very specific.
+
+    USAGE GUIDE:
+
+    Please refer to this model card for
+
+        Specific usage, suggested settings, changing ACTIVE EXPERTS, templates, settings and the like:
+        How to maximize this model in "uncensored" form, with specific notes on "abliterated" models.
+        Rep pen / temp settings specific to getting the model to perform strongly.
+
+    https://huggingface.co/DavidAU/Qwen3-18B-A3B-Stranger-Thoughts-Abliterated-Uncensored-GGUF
+
+    GGUF / QUANTS / SPECIAL SHOUTOUT:
+
+    Special thanks to team Mradermacher for making the quants!
+
+    https://huggingface.co/mradermacher/Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored-GGUF
+
+    KNOWN ISSUES:
+
+        Model may "mis-capitalize" word(s) - lowercase, where uppercase should be - from time to time.
+        Model may add extra space from time to time before a word.
+        Incorrect template and/or settings will result in a drop in performance / poor performance.
+  overrides:
+    parameters:
+      model: Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored.i1-Q4_K_M.gguf
+  files:
+    - filename: Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored.i1-Q4_K_M.gguf
+      sha256: ef4a601adfc2897b214cda2d16f76dcb8215a1b994bc76c696158d68ec535dd8
+      uri: huggingface://mradermacher/Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored-i1-GGUF/Qwen3-42B-A3B-Stranger-Thoughts-Deep20x-Abliterated-Uncensored.i1-Q4_K_M.gguf
+- !!merge <<: *qwen3
+  name: "qwen3-22b-a3b-the-harley-quinn"
+  icon: https://huggingface.co/DavidAU/Qwen3-22B-A3B-The-Harley-Quinn/resolve/main/qwen3-harley-quinn-23b.webp
+  urls:
+    - https://huggingface.co/DavidAU/Qwen3-22B-A3B-The-Harley-Quinn
+    - https://huggingface.co/mradermacher/Qwen3-22B-A3B-The-Harley-Quinn-GGUF
+  description: |
+    WARNING: MADNESS - UN HINGED and... NSFW. Vivid prose. INTENSE. Visceral Details. Violence. HORROR. GORE. Swearing. UNCENSORED... humor, romance, fun.
+    Qwen3-22B-A3B-The-Harley-Quinn
+
+    This repo contains the full precision source code, in "safe tensors" format to generate GGUFs, GPTQ, EXL2, AWQ, HQQ and other formats. The source code can also be used directly.
+
+    ABOUT:
+
+    A stranger, yet radically different version of Kalmaze's "Qwen/Qwen3-16B-A3B" with the experts pruned to 64 (from 128, the Qwen 3 30B-A3B version) and then I added 19 layers expanding (Brainstorm 20x by DavidAU info at bottom of this page) the model to 22B total parameters.
+
+    The goal: slightly alter the model, to address some odd creative thinking and output choices.
+
+    Then... Harley Quinn showed up, and then it was a party!
+
+    A wild, out of control (sometimes) but never boring party.
+
+    Please note that the modifications affect the entire model operation; roughly I adjusted the model to think a little "deeper" and "ponder" a bit - but this is a very rough description.
+
+    That being said, reasoning and output generation will be altered regardless of your use case(s).
+
+    These modifications pushes Qwen's model to the absolute limit for creative use cases.
+
+    Detail, vividiness, and creativity all get a boost.
+
+    Prose (all) will also be very different from "default" Qwen3.
+
+    Likewise, regen(s) of the same prompt - even at the same settings - will create very different version(s) too.
+
+    The Brainstrom 20x has also lightly de-censored the model under some conditions.
+
+    However, this model can be prone to bouts of madness.
+
+    It will not always behave, and it will sometimes go -wildly- off script.
+
+    See 4 examples below.
+
+    Model retains full reasoning, and output generation of a Qwen3 MOE ; but has not been tested for "non-creative" use cases.
+
+    Model is set with Qwen's default config:
+
+        40 k context
+        8 of 64 experts activated.
+        Chatml OR Jinja Template (embedded)
+
+    Four example generations below.
+
+    IMPORTANT:
+
+    See usage guide / repo below to get the most out of this model, as settings are very specific.
+
+    If not set correctly, this model will not work the way it should.
+
+    Critical settings:
+
+        Chatml or Jinja Template (embedded, but updated version at repo below)
+        Rep pen of 1.01 or 1.02 ; higher (1.04, 1.05) will result in "Harley Mode".
+        Temp range of .6 to 1.2. ; higher you may need to prompt the model to "output" after thinking.
+        Experts set at 8-10 ; higher will result in "odder" output BUT it might be better.
+
+    That being said, "Harley Quinn" may make her presence known at any moment.
+
+    USAGE GUIDE:
+
+    Please refer to this model card for
+
+        Specific usage, suggested settings, changing ACTIVE EXPERTS, templates, settings and the like:
+        How to maximize this model in "uncensored" form, with specific notes on "abliterated" models.
+        Rep pen / temp settings specific to getting the model to perform strongly.
+
+    https://huggingface.co/DavidAU/Qwen3-18B-A3B-Stranger-Thoughts-Abliterated-Uncensored-GGUF
+
+    GGUF / QUANTS / SPECIAL SHOUTOUT:
+
+    Special thanks to team Mradermacher for making the quants!
+
+    https://huggingface.co/mradermacher/Qwen3-22B-A3B-The-Harley-Quinn-GGUF
+
+    KNOWN ISSUES:
+
+        Model may "mis-capitalize" word(s) - lowercase, where uppercase should be - from time to time.
+        Model may add extra space from time to time before a word.
+        Incorrect template and/or settings will result in a drop in performance / poor performance.
+        Can rant at the end / repeat. Most of the time it will stop on its own.
+
+    Looking for the Abliterated / Uncensored version?
+
+    https://huggingface.co/DavidAU/Qwen3-23B-A3B-The-Harley-Quinn-PUDDIN-Abliterated-Uncensored
+
+    In some cases this "abliterated/uncensored" version may work better than this version.
+    EXAMPLES
+
+    Standard system prompt, rep pen 1.01-1.02, topk 100, topp .95, minp .05, rep pen range 64.
+
+    Tested in LMStudio, quant Q4KS, GPU (CPU output will differ slightly).
+
+    As this is the mid range quant, expected better results from higher quants and/or with more experts activated to be better.
+
+    NOTE: Some formatting lost on copy/paste.
+
+    WARNING: NSFW. Vivid prose. INTENSE. Visceral Details. Violence. HORROR. GORE. Swearing. UNCENSORED... humor, romance, fun.
+  overrides:
+    parameters:
+      model: Qwen3-22B-A3B-The-Harley-Quinn.Q4_K_M.gguf
+  files:
+    - filename: Qwen3-22B-A3B-The-Harley-Quinn.Q4_K_M.gguf
+      sha256: a3666754efde5d6c054de53cff0f38f1bb4a20117e2502eed7018ae57017b0a2
+      uri: huggingface://mradermacher/Qwen3-22B-A3B-The-Harley-Quinn-GGUF/Qwen3-22B-A3B-The-Harley-Quinn.Q4_K_M.gguf
+- !!merge <<: *qwen3
+  name: "qwen3-33b-a3b-stranger-thoughts-abliterated-uncensored"
+  icon: https://huggingface.co/DavidAU/Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored/resolve/main/qwen3-33b-ablit.jpg
+  urls:
+    - https://huggingface.co/DavidAU/Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored
+    - https://huggingface.co/mradermacher/Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored-GGUF
+  description: |
+    WARNING: NSFW. Vivid prose. INTENSE. Visceral Details. Violence. HORROR. GORE. Swearing. UNCENSORED... humor, romance, fun.
+    Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored
+
+    This repo contains the full precision source code, in "safe tensors" format to generate GGUFs, GPTQ, EXL2, AWQ, HQQ and other formats. The source code can also be used directly.
+
+    ABOUT:
+
+    A stranger, yet radically different version of "Qwen/Qwen3-30B-A3B", abliterated by "huihui-ai" , with 4 added layers expanding the model to 33B total parameters.
+
+    The goal: slightly alter the model, to address some odd creative thinking and output choices AND de-censor it.
+
+    Please note that the modifications affect the entire model operation; roughly I adjusted the model to think a little "deeper" and "ponder" a bit - but this is a very rough description.
+
+    I also ran reasoning tests (non-creative) to ensure model was not damaged and roughly matched original model performance.
+
+    That being said, reasoning and output generation will be altered regardless of your use case(s)
+  overrides:
+    parameters:
+      model: Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored.Q4_K_M.gguf
+  files:
+    - filename: Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored.Q4_K_M.gguf
+      sha256: fc0f028ab04d4643032e5bf65c3b51ba947e97b4f562c4fc25c06b6a20b14616
+      uri: huggingface://mradermacher/Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored-GGUF/Qwen3-33B-A3B-Stranger-Thoughts-Abliterated-Uncensored.Q4_K_M.gguf
 - &gemma3
   url: "github:mudler/LocalAI/gallery/gemma.yaml@master"
   name: "gemma-3-27b-it"
@@ -2006,6 +2287,35 @@
     - filename: gemma-3n-E4B-it-Q8_0.gguf
       sha256: 9f74079242c765116bd1f33123aa07160b5e93578c2d0032594b7ed97576f9c3
       uri: huggingface://ggml-org/gemma-3n-E4B-it-GGUF/gemma-3n-E4B-it-Q8_0.gguf
+- !!merge <<: *gemma3
+  name: "gemma-3-4b-it-max-horror-uncensored-dbl-x-imatrix"
+  icon: https://huggingface.co/DavidAU/Gemma-3-4b-it-MAX-HORROR-Uncensored-DBL-X-Imatrix-GGUF/resolve/main/gemma4-horror-max2.jpg
+  urls:
+    - https://huggingface.co/DavidAU/Gemma-3-4b-it-MAX-HORROR-Uncensored-DBL-X-Imatrix-GGUF
+  description: |
+    Google's newest Gemma-3 model that has been uncensored by David_AU (maintains instruction following / model performance and adds 4 layers to the model) and re-enforced with a system prompt (optional) - see below.
+    The "Horror Imatrix" was built using Grand Horror 16B (at my repo). This adds a "tint" of horror to the model.
+
+    5 examples provided (NSFW / F-Bombs galore) below with prompts at IQ4XS (56 t/s on mid level card).
+
+    Context: 128k.
+
+    "MAXED"
+
+    This means the embed and output tensor are set at "BF16" (full precision) for all quants. This enhances quality, depth and general performance at the cost of a slightly larger quant.
+
+    "HORROR IMATRIX"
+
+    A strong, in house built, imatrix dataset built by David_AU which results in better overall function, instruction following, output quality and stronger connections to ideas, concepts and the world in general.
+
+    This combines with "MAXing" the quant to improve preformance.
+  overrides:
+    parameters:
+      model: Gemma-3-4b-it-MAX-HORROR-Uncensored-D_AU-Q4_K_M-imat.gguf
+  files:
+    - filename: Gemma-3-4b-it-MAX-HORROR-Uncensored-D_AU-Q4_K_M-imat.gguf
+      sha256: 1c577e4c84311c39b3d54b0cef12857ad46e88755f858143accbfcca7cc9fc6b
+      uri: huggingface://DavidAU/Gemma-3-4b-it-MAX-HORROR-Uncensored-DBL-X-Imatrix-GGUF/Gemma-3-4b-it-MAX-HORROR-Uncensored-D_AU-Q4_K_M-imat.gguf
 - &llama4
   url: "github:mudler/LocalAI/gallery/llama3.1-instruct.yaml@master"
   icon: https://avatars.githubusercontent.com/u/153379578
@@ -12905,6 +13215,75 @@
     - filename: Delta-Vector_Austral-24B-Winton-Q4_K_M.gguf
       sha256: feb76e0158d1ebba1809de89d01671b86037f768ebd5f6fb165885ae6338b1b7
       uri: huggingface://bartowski/Delta-Vector_Austral-24B-Winton-GGUF/Delta-Vector_Austral-24B-Winton-Q4_K_M.gguf
+- !!merge <<: *mistral03
+  name: "mistral-small-3.2-46b-the-brilliant-raconteur-ii-instruct-2506"
+  url: "github:mudler/LocalAI/gallery/chatml.yaml@master"
+  icon: https://huggingface.co/DavidAU/Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506/resolve/main/mistral-2506.jpg
+  urls:
+    - https://huggingface.co/DavidAU/Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506
+    - https://huggingface.co/mradermacher/Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506-GGUF
+  description: |
+    WARNING: MADNESS - UN HINGED and... NSFW. Vivid prose. INTENSE. Visceral Details. Violence. HORROR. GORE. Swearing. UNCENSORED... humor, romance, fun.
+    Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506
+
+    This repo contains the full precision source code, in "safe tensors" format to generate GGUFs, GPTQ, EXL2, AWQ, HQQ and other formats. The source code can also be used directly.
+
+    ABOUT:
+
+    A stronger, more creative Mistral (Mistral-Small-3.2-24B-Instruct-2506) extended to 79 layers, 46B parameters with Brainstorm 40x by DavidAU (details at very bottom of the page). This is version II, which has a jump in detail, and raw emotion relative to version 1.
+
+    This model pushes Mistral's Instruct 2506 to the limit:
+
+        Regens will be very different, even with same prompt / settings.
+        Output generation will vary vastly on each generation.
+        Reasoning will be changed, and often shorter.
+        Prose, creativity, word choice, and general "flow" are improved.
+        Several system prompts below help push this model even further.
+        Model is partly de-censored / abliterated. Most Mistrals are more uncensored that most other models too.
+        This model can also be used for coding too; even at low quants.
+        Model can be used for all use cases too.
+
+    As this is an instruct model, this model thrives on instructions - both in the system prompt and/or the prompt itself.
+
+    One example below with 3 generations using Q4_K_S.
+
+    Second example below with 2 generations using Q4_K_S.
+
+    Quick Details:
+
+        Model is 128k context, Jinja template (embedded) OR Chatml Template.
+        Reasoning can be turned on/off (see system prompts below) and is OFF by default.
+        Temp range .1 to 1 suggested, with 1-2 for enhanced creative. Above temp 2, is strong but can be very different.
+        Rep pen range: 1 (off) or very light 1.01, 1.02 to 1.05. (model is sensitive to rep pen - this affects reasoning / generation length.)
+        For creative/brainstorming use: suggest 2-5 generations due to variations caused by Brainstorm.
+
+    Observations:
+
+        Sometimes using Chatml (or Alpaca / others ) template (VS Jinja) will result in stronger creative generation.
+        Model can be operated with NO system prompt; however a system prompt will enhance generation.
+        Longer prompts, that more detailed, with more instructions will result in much stronger generations.
+        For prose directives: You may need to add directions, because the model may follow your instructions too closely. IE: "use short sentences" vs "use short sentences sparsely".
+        Reasoning (on) can lead to better creative generation, however sometimes generation with reasoning off is better.
+        Rep pen of up to 1.05 may be needed on quants Q2k/q3ks for some prompts to address "low bit" issues.
+
+    Detailed settings, system prompts, how to and examples below.
+
+    NOTES:
+
+    Image generation should also be possible with this model, just like the base model. Brainstorm was not applied to the image generation systems of the model... yet.
+
+    This is Version II and subject to change / revision.
+
+    This model is a slightly different version of:
+
+    https://huggingface.co/DavidAU/Mistral-Small-3.2-46B-The-Brilliant-Raconteur-Instruct-2506
+  overrides:
+    parameters:
+      model: Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506.Q4_K_M.gguf
+  files:
+    - filename: Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506.Q4_K_M.gguf
+      sha256: 5c8b6f21ae4f671880fafe60001f30f4c639a680e257701e474777cfcf00f8f6
+      uri: huggingface://mradermacher/Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506-GGUF/Mistral-Small-3.2-46B-The-Brilliant-Raconteur-II-Instruct-2506.Q4_K_M.gguf
 - &mudler
   url: "github:mudler/LocalAI/gallery/mudler.yaml@master" ### START mudler's LocalAI specific-models
   name: "LocalAI-llama3-8b-function-call-v0.2"
